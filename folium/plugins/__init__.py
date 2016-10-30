@@ -17,6 +17,7 @@ from .polyline_text_path import PolyLineTextPath
 from .scroll_zoom_toggler import ScrollZoomToggler
 from .terminator import Terminator
 from .timestamped_geo_json import TimestampedGeoJson
+from .heat_map_withtime import HeatMapWithTime
 
 __all__ = [
     'MarkerCluster',
@@ -29,5 +30,6 @@ __all__ = [
     'ImageOverlay',
     'Fullscreen',
     'PolyLineTextPath',
-    'FloatImage'
+    'FloatImage',
+    'HeatMapWithTime'
     ]
