@@ -6,13 +6,13 @@ Heat Map with time dimension
 Create a HeatMapWithTime layer that can be added to a folium map
 
 """
-import json
 from jinja2 import Template
 
 from branca.element import JavascriptLink, Figure, CssLink, Element
 from branca.utilities import none_min, none_max
 
 from folium.map import TileLayer
+
 
 class HeatMapWithTime(TileLayer):
     def __init__(self, data, index=None, name=None, radius=15, min_opacity=0, max_opacity=0.6,
@@ -63,10 +63,10 @@ class HeatMapWithTime(TileLayer):
 
         # input data
         self.data = data
-        self.index = index if index is not None else [str(i) for i in range(1, len(data)+1)]
+        self.index = index if index is not None else [str(i) for i in range(1, len(data) + 1)]
         if len(self.data) != len(self.index):
             raise ValueError("Input data and index are not of compatible lengths.")
-        self.times = range(1, len(data)+1)
+        self.times = range(1, len(data) + 1)
 
         # heatmap settings
         self.radius = radius
@@ -96,7 +96,6 @@ class HeatMapWithTime(TileLayer):
         self.play_reverse_button = "true"
         self.time_slider_drap_update = "false"
         self.style_NS = "leaflet-control-timecontrol"
-
 
         self._template = Template(u"""
         {% macro script(this, kwargs) %}
