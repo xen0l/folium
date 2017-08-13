@@ -11,6 +11,7 @@ from .fast_marker_cluster import FastMarkerCluster
 from .float_image import FloatImage
 from .fullscreen import Fullscreen
 from .heat_map import HeatMap
+from .heat_map_withtime import HeatMapWithTime
 from .image_overlay import ImageOverlay
 from .marker_cluster import MarkerCluster
 from .polyline_text_path import PolyLineTextPath
